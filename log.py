@@ -71,7 +71,7 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def wait_for_adb(adb: Path, interval: float = 2.0) -> None:
+def wait_for_adb(adb: Path, interval: float = 0.5) -> None:
     print(f"Waiting for ADB device on {adb}...")
     while True:
         if adb_is_connected(adb):
